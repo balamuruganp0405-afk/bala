@@ -845,6 +845,11 @@ ul {
 }
 
 .portfolio-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.blogs-brief-grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
@@ -1986,6 +1991,10 @@ ul {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .blogs-brief-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   
   .skills-grid {
     grid-template-columns: 1fr;
@@ -2174,7 +2183,7 @@ ul {
     height: 320px;
   }
   
-  .services-grid, .portfolio-grid, .stats-grid, .certs-grid {
+  .services-grid, .portfolio-grid, .stats-grid, .certs-grid, .blogs-brief-grid {
     grid-template-columns: 1fr;
   }
   
