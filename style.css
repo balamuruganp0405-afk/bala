@@ -606,7 +606,7 @@ ul {
    COMPONENTS: SERVICES
    ========================================== */
 .services-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -2745,7 +2745,8 @@ ul {
 }
 
 .seo-bg { background-color: #004AAD; }
-.sem-bg { background-color: #ca8a04; }
+.google-ads-bg { background-color: #ca8a04; }
+.meta-ads-bg { background-color: #d946ef; }
 .partner-bg { background-color: #2563EB; }
 
 .badge-1 {
