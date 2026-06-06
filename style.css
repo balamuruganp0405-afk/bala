@@ -2946,3 +2946,58 @@ ul {
   border: 1.5px solid var(--primary);
   display: block;
 }
+
+/* Custom Text Logo (Double-line layout) */
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.15;
+  transition: var(--transition-normal);
+}
+.logo-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  transition: var(--transition-normal);
+}
+.logo-subtitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 1px;
+}
+.logo-text-wrapper:hover .logo-title {
+  color: #fff;
+}
+
+/* Navbar Desktop Call-to-Action Button */
+.nav-btn-desktop {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  background-color: var(--primary);
+  color: #fff;
+  border: 1.5px solid var(--primary);
+  transition: var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.nav-btn-desktop:hover {
+  background-color: transparent;
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .nav-btn-desktop {
+    display: none !important;
+  }
+}
