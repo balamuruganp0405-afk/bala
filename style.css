@@ -2936,3 +2936,13 @@ ul {
   }
 }
 
+
+/* Custom Logo Image Styles */
+.logo-img {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary);
+  display: block;
+}
