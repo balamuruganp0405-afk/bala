@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.style.opacity = '0';
       setTimeout(() => {
         preloader.style.display = 'none';
+        document.body.classList.add('page-loaded');
       }, 500);
     });
     // Fallback: hide loader if loading takes too long
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.style.opacity = '0';
       setTimeout(() => {
         preloader.style.display = 'none';
+        document.body.classList.add('page-loaded');
       }, 500);
     }, 3000);
   }
