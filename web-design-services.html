@@ -126,7 +126,59 @@
       color: var(--text-muted);
       margin-bottom: 0;
     }
+  
+    /* Responsive layout classes for service landing pages */
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .service-deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .service-timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .service-hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    @media (max-width: 992px) {
+      .service-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .service-hero-grid .reveal-left {
+        text-align: center;
+      }
+      .service-hero-grid .hero-title {
+        text-align: center !important;
+      }
+      .service-hero-btns {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 768px) {
+      .service-deliverables-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .service-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
   </style>
+
 </head>
 <body>
 
@@ -187,12 +239,12 @@
       <div style="margin-top: 2rem;">
         
         <!-- Hero Split Grid -->
-        <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem;">
+        <div class="service-hero-grid">
           <div class="reveal-left">
             <span class="badge" style="margin-bottom: 1rem;">Conversion UX</span>
             <h1 class="hero-title" style="font-size: 2.5rem; line-height: 1.2; text-align: left; margin-bottom: 1rem;">Responsive Website Design Services & Custom Web Code</h1>
             <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Custom, high-speed layout designs. I offer responsive website design services that load under 1.5 seconds and convert visitors into leads.</p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="service-hero-btns">
               <a href="contact.html?service=webdesign" class="btn btn-primary">Request Web Design Quote</a>
               <a href="#deliverables" class="btn btn-secondary">Explore Core Deliverables</a>
             </div>
@@ -213,7 +265,7 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">High-performance execution using modern analytics and search-engine compliant strategies.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+          <div class="service-deliverables-grid">
             
             <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.5rem; transition: var(--transition-normal);" onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.3)'" onmouseout="this.style.borderColor='var(--border-color)'">
               <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -242,7 +294,7 @@
             <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.5rem; transition: var(--transition-normal);" onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.3)'" onmouseout="this.style.borderColor='var(--border-color)'">
               <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
                 <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: var(--primary); flex-shrink: 0;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Built-In Technical SEO
+                Built-In SEO Coding
               </h3>
               <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Incorporate semantic tags, alt text attributes, schema structures, and optimized layouts from day one.</p>
             </div>
@@ -258,30 +310,30 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">How we go from current status audits to scaled conversion growth.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+          <div class="service-timeline-grid">
             
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">1</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Wireframing & UX Map</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Planning page architecture, structure hierarchy, visual branding guides, and high-impact CTA zones.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Planning page architecture, structure hierarchy, visual branding guides, and high-impact CTA zones.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">2</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Lightweight Front-End Coding</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Writing clean, semantic HTML5 structure, modular CSS, and responsive JavaScript code elements.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Writing clean, semantic HTML5 structure, modular CSS, and responsive JavaScript code elements.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">3</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Speed Optimization Audit</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Compressing media files, resolving layout shifts (CLS), setting up lazy loading, and verifying Core Web Vitals.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Compressing media files, resolving layout shifts (CLS), setting up lazy loading, and verifying Core Web Vitals.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">4</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">SEO & Launch Checklist</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Adding page meta titles, descriptive tags, testing forms, setting up SSL hosting redirections, and indexing.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Adding page meta titles, descriptive tags, testing forms, setting up SSL hosting redirections, and indexing.</p>
             </div>
         
           </div>
@@ -353,7 +405,7 @@
         <div style="text-align: center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(245, 129, 45, 0.05) 100%); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 4rem 2rem; margin-bottom: 2rem;">
           <h3 style="font-size: 1.85rem; margin-bottom: 1rem; color: #fff;">Ready to Scale Your Digital Performance?</h3>
           <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto 2rem auto;">Book a free strategy audit call with me. We will review your search terms, competitor PPC campaigns, and conversion opportunities.</p>
-          <a href="contact.html?service=webdesign" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">Get Started & Claims Strategy Call</a>
+          <a href="contact.html?service=webdesign" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">Get Started & Claim Strategy Call</a>
         </div>
 
       </div>

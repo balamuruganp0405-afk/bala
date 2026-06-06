@@ -126,7 +126,59 @@
       color: var(--text-muted);
       margin-bottom: 0;
     }
+  
+    /* Responsive layout classes for service landing pages */
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .service-deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .service-timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .service-hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    @media (max-width: 992px) {
+      .service-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .service-hero-grid .reveal-left {
+        text-align: center;
+      }
+      .service-hero-grid .hero-title {
+        text-align: center !important;
+      }
+      .service-hero-btns {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 768px) {
+      .service-deliverables-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .service-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
   </style>
+
 </head>
 <body>
 
@@ -187,12 +239,12 @@
       <div style="margin-top: 2rem;">
         
         <!-- Hero Split Grid -->
-        <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem;">
+        <div class="service-hero-grid">
           <div class="reveal-left">
             <span class="badge" style="margin-bottom: 1rem;">Paid Social</span>
             <h1 class="hero-title" style="font-size: 2.5rem; line-height: 1.2; text-align: left; margin-bottom: 1rem;">Meta Ads Services | Facebook & Instagram Ads Management</h1>
             <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Get results with a Meta Ads Specialist. I deploy Facebook and Instagram ads management campaigns that turn social feeds into lead generation pipelines.</p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="service-hero-btns">
               <a href="contact.html?service=meta_ads" class="btn btn-primary">Claim Free Ads Strategy</a>
               <a href="#deliverables" class="btn btn-secondary">Explore Core Deliverables</a>
             </div>
@@ -213,7 +265,7 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">High-performance execution using modern analytics and search-engine compliant strategies.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+          <div class="service-deliverables-grid">
             
             <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.5rem; transition: var(--transition-normal);" onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.3)'" onmouseout="this.style.borderColor='var(--border-color)'">
               <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -258,30 +310,30 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">How we go from current status audits to scaled conversion growth.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+          <div class="service-timeline-grid">
             
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">1</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Audience Profiling</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Extracting your ideal customer demographic metrics, interest lists, and online buying habits to model target pools.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Extracting your ideal customer demographic metrics, interest lists, and online buying habits to model target pools.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">2</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Creative Asset Structuring</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Designing high-converting ad layouts (carousels, single image feeds) and writing copy hooks for social feeds.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Designing high-converting ad layouts (carousels, single image feeds) and writing copy hooks for social feeds.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">3</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Campaign Funnel Setup</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Configuring pixel conversion events, custom instant forms, retargeting pools, and budget allocations.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Configuring pixel conversion events, custom instant forms, retargeting pools, and budget allocations.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">4</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">A/B Fatigue Management</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Testing new creative hooks, checking frequency scores, modifying targeting grids, and scaling budgets.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Testing new creative hooks, checking frequency scores, modifying targeting grids, and scaling budgets.</p>
             </div>
         
           </div>
@@ -322,7 +374,7 @@
                 <svg viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
               </div>
               <div class="faq-answer">
-                <p>Google Ads captures active search intent (users actively seeking a service). Meta Ads captures demographic and interest attention (users browsing social feeds). Meta is excellent for scaling brand reach and capturing leads at a lower cost-per-click.</p>
+                <p>Google Ads captures active search intent (users actively seeking a service). Meta Ads captures demographic and interest attention (users browsing social feeds). Meta is excellent for scaling brand reach and capturing leads at a lower cost-per-lead.</p>
               </div>
             </div>
         
@@ -353,7 +405,7 @@
         <div style="text-align: center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(245, 129, 45, 0.05) 100%); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 4rem 2rem; margin-bottom: 2rem;">
           <h3 style="font-size: 1.85rem; margin-bottom: 1rem; color: #fff;">Ready to Scale Your Digital Performance?</h3>
           <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto 2rem auto;">Book a free strategy audit call with me. We will review your search terms, competitor PPC campaigns, and conversion opportunities.</p>
-          <a href="contact.html?service=meta_ads" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">Get Started & Claims Strategy Call</a>
+          <a href="contact.html?service=meta_ads" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">Get Started & Claim Strategy Call</a>
         </div>
 
       </div>

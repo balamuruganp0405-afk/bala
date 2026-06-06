@@ -126,7 +126,59 @@
       color: var(--text-muted);
       margin-bottom: 0;
     }
+  
+    /* Responsive layout classes for service landing pages */
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .service-deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .service-timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .service-hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    @media (max-width: 992px) {
+      .service-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .service-hero-grid .reveal-left {
+        text-align: center;
+      }
+      .service-hero-grid .hero-title {
+        text-align: center !important;
+      }
+      .service-hero-btns {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 768px) {
+      .service-deliverables-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .service-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
   </style>
+
 </head>
 <body>
 
@@ -187,12 +239,12 @@
       <div style="margin-top: 2rem;">
         
         <!-- Hero Split Grid -->
-        <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem;">
+        <div class="service-hero-grid">
           <div class="reveal-left">
             <span class="badge" style="margin-bottom: 1rem;">Paid Search</span>
             <h1 class="hero-title" style="font-size: 2.5rem; line-height: 1.2; text-align: left; margin-bottom: 1rem;">Google Ads Services & PPC Campaign Management</h1>
             <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Work with a certified Google Ads Specialist. I configure PPC campaign management structures that capture commercial search intent and maximize acquisition values.</p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="service-hero-btns">
               <a href="contact.html?service=google_ads" class="btn btn-primary">Request PPC Consultation</a>
               <a href="#deliverables" class="btn btn-secondary">Explore Core Deliverables</a>
             </div>
@@ -213,7 +265,7 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">High-performance execution using modern analytics and search-engine compliant strategies.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+          <div class="service-deliverables-grid">
             
             <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2.5rem; transition: var(--transition-normal);" onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.3)'" onmouseout="this.style.borderColor='var(--border-color)'">
               <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -258,30 +310,30 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">How we go from current status audits to scaled conversion growth.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+          <div class="service-timeline-grid">
             
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">1</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Competitor Bid Analysis</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Auditing competitor search ads, estimated CPC budgets, search market share, and landing page funnels.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Auditing competitor search ads, estimated CPC budgets, search market share, and landing page funnels.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">2</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Campaign & Ad Group Setup</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Structuring search campaigns with targeted ad groups and negative lists to ensure complete ad relevancy.</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Structuring search campaigns with targeted ad groups and negative lists to ensure complete ad relevancy.</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">3</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Ad Copy Writing & Extensions</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Crafting compelling headlines, description blocks, call extensions, and sitelinks to maximize click-through rate (CTR).</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Crafting compelling headlines, description blocks, call extensions, and sitelinks to maximize click-through rate (CTR).</p>
             </div>
         
             <div style="text-align: center;">
               <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">4</div>
               <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Budget Optimization & Scaling</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">Analyzing daily search term reports, adjusting keyword bids, running A/B tests, and tracking cost-per-lead (CPL).</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Analyzing daily search term reports, adjusting keyword bids, running A/B tests, and tracking cost-per-lead (CPL).</p>
             </div>
         
           </div>
@@ -353,7 +405,7 @@
         <div style="text-align: center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(245, 129, 45, 0.05) 100%); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 4rem 2rem; margin-bottom: 2rem;">
           <h3 style="font-size: 1.85rem; margin-bottom: 1rem; color: #fff;">Ready to Scale Your Digital Performance?</h3>
           <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto 2rem auto;">Book a free strategy audit call with me. We will review your search terms, competitor PPC campaigns, and conversion opportunities.</p>
-          <a href="contact.html?service=google_ads" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">Get Started & Claims Strategy Call</a>
+          <a href="contact.html?service=google_ads" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">Get Started & Claim Strategy Call</a>
         </div>
 
       </div>
