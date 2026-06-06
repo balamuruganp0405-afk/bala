@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const successModal = document.getElementById('success-modal');
   const closeModalBtn = document.getElementById('close-modal');
 
-  if (contactForm && successModal) {
+  if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -448,22 +448,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Show success modal
-      successModal.classList.add('show');
+      // Reset and redirect to thank you page
       contactForm.reset();
-    });
-
-    if (closeModalBtn) {
-      closeModalBtn.addEventListener('click', () => {
-        successModal.classList.remove('show');
-      });
-    }
-
-    // Close on outside click
-    successModal.addEventListener('click', (e) => {
-      if (e.target === successModal) {
-        successModal.classList.remove('show');
-      }
+      window.location.href = 'thank-you.html';
     });
   }
 
