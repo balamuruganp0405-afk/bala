@@ -1,26 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-  /* ==========================================
-     1. PRELOADER
-     ========================================== */
+/* ==========================================
+   1. PRELOADER (Runs immediately to prevent blocking)
+   ========================================== */
+(function() {
   const preloader = document.querySelector('.loader-overlay');
   if (preloader) {
-    window.addEventListener('load', () => {
+    const hideLoader = () => {
       preloader.style.opacity = '0';
       setTimeout(() => {
         preloader.style.display = 'none';
         document.body.classList.add('page-loaded');
       }, 500);
-    });
+    };
+
+    if (document.readyState === 'complete') {
+      hideLoader();
+    } else {
+      window.addEventListener('load', hideLoader);
+    }
+
     // Fallback: hide loader if loading takes too long
-    setTimeout(() => {
-      preloader.style.opacity = '0';
-      setTimeout(() => {
-        preloader.style.display = 'none';
-        document.body.classList.add('page-loaded');
-      }, 500);
-    }, 3000);
+    setTimeout(hideLoader, 2000);
   }
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================
      2. DARK/LIGHT MODE TOGGLER (Permanently locked to dark mode)
