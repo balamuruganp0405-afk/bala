@@ -215,6 +215,7 @@ ul {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  animation: pulseGlow 1.5s infinite;
 }
 
 .btn-secondary {
@@ -314,6 +315,11 @@ ul {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.mobile-nav-contact,
+.top-bar {
+  display: none;
 }
 
 .nav-link {
@@ -646,7 +652,8 @@ ul {
 .service-card:hover .service-icon {
   background-color: var(--primary);
   color: #ffffff;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) scale(1.1);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
 }
 
 .service-icon svg {
@@ -843,8 +850,9 @@ ul {
 }
 
 .portfolio-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-xl);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
 .portfolio-img-box {
@@ -1998,6 +2006,43 @@ ul {
   .nav-menu.open {
     transform: translateX(0);
   }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F172A;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    height: 35px;
+  }
+
+  .top-bar-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .top-bar-link svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
+  .navbar {
+    top: 35px;
+  }
+
+  .navbar.scrolled {
+    top: 35px;
+  }
   
   .burger.toggle span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -2579,6 +2624,7 @@ ul {
   align-items: center;
   justify-content: center;
   z-index: 2;
+  animation: floatCard 6s ease-in-out infinite;
 }
 
 .hero-frame::before {
@@ -2688,6 +2734,18 @@ ul {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0px); }
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
 }
 
 /* About Brief Redesign */

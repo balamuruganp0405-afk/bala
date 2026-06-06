@@ -21,30 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================
-     2. DARK/LIGHT MODE TOGGLER
+     2. DARK/LIGHT MODE TOGGLER (Permanently locked to dark mode)
      ========================================== */
-  const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || 'light';
-
-  // Apply initial theme
-  if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const theme = document.documentElement.getAttribute('data-theme');
-      if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  }
+  document.documentElement.setAttribute('data-theme', 'dark');
 
   /* ==========================================
      3. STICKY NAVBAR & ACTIVE NAV LINKS
