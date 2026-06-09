@@ -430,7 +430,115 @@
       }
     }
 
-    
+    @media (max-width: 768px) {
+      /* Reduce section paddings globally to reclaim empty space */
+      .section {
+        padding: 3rem 0 !important;
+      }
+      
+      /* Optimize Hero Section spacing */
+      .hero-portfolio-grid {
+        padding: 2.5rem 0 1rem 0 !important;
+        gap: 2rem !important;
+      }
+      
+      .hero-portfolio-content h1 {
+        font-size: 2.25rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .hero-portfolio-content p {
+        font-size: 1rem !important;
+        margin-bottom: 1.75rem !important;
+      }
+      
+      .hero-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+        margin-top: 2rem !important;
+      }
+      
+      .stat-box {
+        padding: 1rem !important;
+      }
+      
+      .stat-number {
+        font-size: 1.75rem !important;
+      }
+      
+      .stat-label {
+        font-size: 0.75rem !important;
+      }
+      
+      /* Shrink portrait card size for mobile viewports */
+      .portrait-card-job {
+        width: 260px !important;
+        height: 330px !important;
+        border-radius: 20px !important;
+      }
+      
+      .portrait-bottom-fade {
+        height: 90px !important;
+      }
+      
+      .portrait-glow-blob {
+        width: 220px !important;
+        height: 220px !important;
+      }
+      
+      /* Reclaim container spaces */
+      .glass-card {
+        padding: 1.5rem !important;
+        border-radius: 16px !important;
+      }
+      
+      /* Work experience card spacing optimization */
+      .experience-job-card {
+        padding: 1.5rem !important;
+        gap: 1.25rem !important;
+      }
+      
+      .experience-job-card h4 {
+        margin-bottom: 0.75rem !important;
+      }
+      
+      .experience-job-card ul li {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* Tabs systems optimization */
+      .tab-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.85rem !important;
+      }
+      
+      .tabs-list {
+        gap: 0.5rem !important;
+        margin-bottom: 1.25rem !important;
+      }
+      
+      /* Country project grids optimization */
+      .project-links-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+      }
+      
+      .project-link-card {
+        padding: 1rem !important;
+      }
+      
+      /* Grid tag margins */
+      .p-tags {
+        gap: 0.5rem !important;
+      }
+      
+      .p-tag {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.8rem !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -539,15 +647,24 @@
           <h2 class="section-title">Professional Journey</h2>
         </div>
         <div class="glass-card" style="padding: 2.5rem; margin-top: 2rem;">
-          <p style="font-size: 1.15rem; line-height: 1.75; color: var(--text-main); margin-bottom: 1.25rem;">
-            My career in digital technology began after completing my **Bachelor of Engineering (Mechanical Engineering) in 2022** from Velammal College of Engineering and Technology. During my engineering studies, I developed a strong interest in analytical problem-solving and marketing mechanics, which naturally pulled me toward search engine algorithms and data-driven marketing.
-          </p>
-          <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.25rem;">
-            I started my professional path as an **SEO Analyst**, learning search engines, site crawlability patterns, and user intent triggers. Demonstrating structured project execution, I progressed rapidly into **SEO Executive** roles, taking complete charge of campaign architecture, technical audits, and performance marketing budgets.
-          </p>
-          <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-muted);">
-            Over the past 4 years, I have successfully managed international campaigns for clients across the **USA, UAE, India, Australia, and Ireland**. I am intensely passionate about helping companies build clean organic search pipelines, scale Google and Meta Ads ROAS, optimize landing page layouts, and leverage Generative Engine Optimization (GEO) strategies to secure maximum visibility in AI search.
-          </p>
+          <ul style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 1.5rem;">
+            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
+              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
+              <strong style="color: var(--text-main); font-weight: 700;">Academic Background:</strong> Completed a Bachelor of Engineering (Mechanical Engineering) in 2022 from Velammal College of Engineering and Technology. Developed a strong logical foundation and analytical problem-solving skills that map directly to search algorithms.
+            </li>
+            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
+              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
+              <strong style="color: var(--text-main); font-weight: 700;">Career Transition & Focus:</strong> Began my professional journey as an SEO Analyst, analyzing site crawlability and search console diagnostic logs, and progressed rapidly to SEO Executive roles managing search visibility budgets.
+            </li>
+            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
+              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
+              <strong style="color: var(--text-main); font-weight: 700;">International Exposure:</strong> Directed organic rankings and lead generation campaigns for 50+ projects serving businesses in the USA, UAE, India, Australia, and Ireland.
+            </li>
+            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
+              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
+              <strong style="color: var(--text-main); font-weight: 700;">Advanced Optimization:</strong> Passionate about scaling Google/Meta Ads conversion funnels, optimizing page load times for Core Web Vitals, and implementing GEO/AEO strategies for AI search platforms.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -921,8 +1038,8 @@
           <div>
             <div style="font-size: 0.85rem; font-weight: 700; color: var(--portfolio-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem;">AI SEO Integration</div>
             <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">Organic Growth & impressions Lift</h3>
-            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
-              Generated over **1,500+ Organic Clicks** and **400,000+ Impressions** within target niches, achieved entirely through AI-assisted content research and semantic indexing optimizations.
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; text-align: left;">
+              Generated over <strong>1,500+ Organic Clicks</strong> and <strong>400,000+ Impressions</strong> within target niches, achieved entirely through AI-assisted content research and semantic indexing optimizations.
             </p>
           </div>
         </div>
@@ -932,8 +1049,8 @@
           <div>
             <div style="font-size: 0.85rem; font-weight: 700; color: var(--portfolio-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem;">Generative Engines</div>
             <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">GEO & AEO Implementations</h3>
-            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
-              Successfully implemented **Generative Engine Optimization (GEO)** and **Answer Engine Optimization (AEO)** strategies, securing brand citations and answers on AI-powered search engines (e.g., Gemini, ChatGPT Search, Perplexity).
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; text-align: left;">
+              Successfully implemented <strong>Generative Engine Optimization (GEO)</strong> and <strong>Answer Engine Optimization (AEO)</strong> strategies, securing brand citations and answers on AI-powered search engines (e.g., Gemini, ChatGPT Search, Perplexity).
             </p>
           </div>
         </div>
@@ -943,8 +1060,8 @@
           <div>
             <div style="font-size: 0.85rem; font-weight: 700; color: var(--portfolio-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem;">Professional Branding</div>
             <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">LinkedIn Audience Growth</h3>
-            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
-              Built a professional personal brand on LinkedIn, growing a network to **12,000+ Followers** and generating over **1,833,253+ Post Impressions** through educational articles, audits, and marketing checklists.
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; text-align: left;">
+              Built a professional personal brand on LinkedIn, growing a network to <strong>12,000+ Followers</strong> and generating over <strong>1,833,253+ Post Impressions</strong> through educational articles, audits, and marketing checklists.
             </p>
           </div>
         </div>
