@@ -1955,6 +1955,13 @@ ul {
   align-items: center;
 }
 
+.about-bio-grid .hero-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
 .about-mission-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2865,7 +2872,7 @@ ul {
   margin-top: 2rem;
 }
 
-.expertise-card {
+.about-expertise-card {
   display: flex;
   gap: 1.5rem;
   padding: 1.5rem;
@@ -2876,30 +2883,38 @@ ul {
   transition: var(--transition-normal);
 }
 
-.expertise-card:hover {
+.about-expertise-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: rgba(0, 74, 173, 0.3);
 }
 
-.expertise-num {
+.about-expertise-card .expertise-num {
   font-size: 1.5rem;
   font-weight: 800;
   color: #ca8a04;
   line-height: 1;
 }
 
-.expertise-content h3 {
+.about-expertise-card .expertise-content h3 {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.expertise-content p {
+.about-expertise-card .expertise-content p {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 0;
   line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+  .about-expertise-card {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
 }
 
 /* Responsive adjustments for redesign */
@@ -3068,4 +3083,263 @@ ul {
 .about-portrait-badge {
   z-index: 3 !important; /* Float above the gradient fade */
 }
+
+/* ==========================================
+   ABOUT PAGE ADDITIONS & STYLING IMPROVEMENTS
+   ========================================== */
+/* Country Badges layout */
+.country-badges-container {
+  margin-top: 1.5rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.country-badges-container h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+.country-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.country-badge {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  transition: var(--transition-normal);
+}
+.country-badge:hover {
+  border-color: var(--primary);
+  background-color: var(--light-blue);
+  transform: translateY(-2px);
+}
+
+/* Expertise Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 74, 173, 0.3);
+}
+.expertise-card:hover::before {
+  opacity: 1;
+}
+.expertise-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--light-blue);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+.expertise-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+.expertise-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+.expertise-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .expertise-card {
+    padding: 1.5rem;
+  }
+  .expertise-icon {
+    margin-bottom: 1rem;
+  }
+  .expertise-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Tools Grid with actual icons */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.tool-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+@media (max-width: 576px) {
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .tool-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+}
+.tool-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tool-icon-wrapper svg {
+  width: 32px;
+  height: 32px;
+}
+.tool-icon-wrapper img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.tool-card span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Mission & Quote layout */
+.quote-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.quote-icon {
+  font-size: 6rem;
+  color: var(--primary);
+  line-height: 1;
+  font-family: serif;
+  position: absolute;
+  top: 0rem;
+  left: 3rem;
+  opacity: 0.15;
+}
+.quote-card blockquote {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.quote-card cite {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 2.5rem;
+}
+.mission-box {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2.5rem;
+  text-align: left;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.mission-box h3 {
+  font-size: 1.4rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.mission-box p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  text-align: center;
+}
+
 
