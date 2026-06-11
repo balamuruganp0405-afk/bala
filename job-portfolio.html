@@ -1076,6 +1076,13 @@
         padding: 1.75rem;
       }
     }
+    
+    @media (max-width: 768px) {
+      .case-study-body-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+    }
 </style>
 </head>
 <body>
@@ -1664,7 +1671,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('alanita-gsc.png', 'Alanita Travel - Google Search Console')">
-                <img src="alanita-gsc.png" alt="Alanita Travel Search Console">
+                <img src="alanita-gsc.png" loading="lazy" alt="Alanita Travel Search Console">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1691,7 +1698,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('alanita-ga.png', 'Alanita Travel - Google Analytics')">
-                <img src="alanita-ga.png" alt="Alanita Travel Google Analytics">
+                <img src="alanita-ga.png" loading="lazy" alt="Alanita Travel Google Analytics">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1718,7 +1725,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('alanita-blog.png', 'Alanita Travel - Blog Growth')">
-                <img src="alanita-blog.png" alt="Alanita Travel Blog Performance">
+                <img src="alanita-blog.png" loading="lazy" alt="Alanita Travel Blog Performance">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1775,7 +1782,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('divine-gsc.png', 'Divine Flowers - Google Search Console')">
-                <img src="divine-gsc.png" alt="Divine Flowers Search Console">
+                <img src="divine-gsc.png" loading="lazy" alt="Divine Flowers Search Console">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1802,7 +1809,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('divine-ga.jpg', 'Divine Flowers - Google Analytics')">
-                <img src="divine-ga.jpg" alt="Divine Flowers Google Analytics">
+                <img src="divine-ga.jpg" loading="lazy" alt="Divine Flowers Google Analytics">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1829,7 +1836,7 @@
                 </div>
               </div>
               <div class="report-card-image-col contain-img" style="cursor: default;">
-                <img src="divine-retention.png" alt="Divine Flowers Insights" style="opacity: 0.85; max-height: 250px;">
+                <img src="divine-retention.jpg" loading="lazy" alt="Divine Flowers Insights" style="opacity: 0.85; max-height: 250px;">
               </div>
             </div>
           </div>
@@ -1840,16 +1847,16 @@
             <p>Top Google Page 1 visibility secured for competitive, high-intent local queries across the United States. Showcased inline in full readability (no popup required).</p>
             <div class="rankings-inline-grid cols-2">
               <div class="ranking-inline-item">
-                <img src="divine-ranking-1.jpg" alt="Divine Flowers - Keyword Ranking 1">
+                <img src="divine-ranking-1.jpg" loading="lazy" alt="Divine Flowers - Keyword Ranking 1">
               </div>
               <div class="ranking-inline-item">
-                <img src="divine-ranking-2.jpg" alt="Divine Flowers - Keyword Ranking 2">
+                <img src="divine-ranking-2.jpg" loading="lazy" alt="Divine Flowers - Keyword Ranking 2">
               </div>
               <div class="ranking-inline-item">
-                <img src="divine-ranking-3.jpg" alt="Divine Flowers - Keyword Ranking 3">
+                <img src="divine-ranking-3.jpg" loading="lazy" alt="Divine Flowers - Keyword Ranking 3">
               </div>
               <div class="ranking-inline-item">
-                <img src="divine-ranking-4.jpg" alt="Divine Flowers - Keyword Ranking 4">
+                <img src="divine-ranking-4.jpg" loading="lazy" alt="Divine Flowers - Keyword Ranking 4">
               </div>
             </div>
           </div>
@@ -1900,7 +1907,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('sanjay-gsc.png', 'Sanjay Tax Pro - Google Search Console')">
-                <img src="sanjay-gsc.png" alt="Sanjay Tax Pro Search Console">
+                <img src="sanjay-gsc.png" loading="lazy" alt="Sanjay Tax Pro Search Console">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1927,7 +1934,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('sanjay-ga.jpg', 'Sanjay Tax Pro - Google Analytics')">
-                <img src="sanjay-ga.jpg" alt="Sanjay Tax Pro Google Analytics">
+                <img src="sanjay-ga.jpg" loading="lazy" alt="Sanjay Tax Pro Google Analytics">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -1954,7 +1961,7 @@
                 </div>
               </div>
               <div class="report-card-image-col contain-img" style="cursor: default;">
-                <img src="sanjay-roi.png" alt="Sanjay Tax Pro Insights" style="opacity: 0.85; max-height: 250px;">
+                <img src="sanjay-roi.jpg" loading="lazy" alt="Sanjay Tax Pro Insights" style="opacity: 0.85; max-height: 250px;">
               </div>
             </div>
           </div>
@@ -1965,16 +1972,16 @@
             <p>Top Google Page 1 visibility secured for competitive tax consulting, bookkeeping, and NRI CPA search terms in the USA market. Showcased inline in full readability (no popup required).</p>
             <div class="rankings-inline-grid cols-2">
               <div class="ranking-inline-item">
-                <img src="sanjay-ranking-1.jpg" alt="Sanjay Tax Pro - Ranking 1">
+                <img src="sanjay-ranking-1.jpg" loading="lazy" alt="Sanjay Tax Pro - Ranking 1">
               </div>
               <div class="ranking-inline-item">
-                <img src="sanjay-ranking-2.jpg" alt="Sanjay Tax Pro - Ranking 2">
+                <img src="sanjay-ranking-2.jpg" loading="lazy" alt="Sanjay Tax Pro - Ranking 2">
               </div>
               <div class="ranking-inline-item">
-                <img src="sanjay-ranking-3.jpg" alt="Sanjay Tax Pro - Ranking 3">
+                <img src="sanjay-ranking-3.jpg" loading="lazy" alt="Sanjay Tax Pro - Ranking 3">
               </div>
               <div class="ranking-inline-item">
-                <img src="sanjay-ranking-4.jpg" alt="Sanjay Tax Pro - Ranking 4">
+                <img src="sanjay-ranking-4.jpg" loading="lazy" alt="Sanjay Tax Pro - Ranking 4">
               </div>
             </div>
           </div>
@@ -2025,7 +2032,7 @@
                 </div>
               </div>
               <div class="report-card-image-col" onclick="openLightbox('vgp-gsc.png', 'VGP Golden Beach Resort - Google Search Console')">
-                <img src="vgp-gsc.png" alt="VGP Resort Search Console">
+                <img src="vgp-gsc.png" loading="lazy" alt="VGP Resort Search Console">
                 <div class="report-card-image-overlay">
                   <div class="zoom-badge">
                     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -2052,7 +2059,7 @@
                 </div>
               </div>
               <div class="report-card-image-col contain-img" style="cursor: default;">
-                <img src="vgp-authority.png" alt="VGP Resort Insights" style="opacity: 0.85; max-height: 250px;">
+                <img src="vgp-authority.jpg" loading="lazy" alt="VGP Resort Insights" style="opacity: 0.85; max-height: 250px;">
               </div>
             </div>
           </div>
@@ -2063,13 +2070,13 @@
             <p>Top Page 1 Google Search rankings secured for luxury hotel, ECR stay bookings, and beachfront wedding venues in Chennai. Showcased inline in full readability (no popup required).</p>
             <div class="rankings-inline-grid cols-3">
               <div class="ranking-inline-item">
-                <img src="vgp-ranking-1.jpg" alt="VGP Resort - Google SERP 1">
+                <img src="vgp-ranking-1.jpg" loading="lazy" alt="VGP Resort - Google SERP 1">
               </div>
               <div class="ranking-inline-item">
-                <img src="vgp-ranking-2.jpg" alt="VGP Resort - Google SERP 2">
+                <img src="vgp-ranking-2.jpg" loading="lazy" alt="VGP Resort - Google SERP 2">
               </div>
               <div class="ranking-inline-item">
-                <img src="vgp-ranking-3.jpg" alt="VGP Resort - Google SERP 3">
+                <img src="vgp-ranking-3.jpg" loading="lazy" alt="VGP Resort - Google SERP 3">
               </div>
             </div>
           </div>
