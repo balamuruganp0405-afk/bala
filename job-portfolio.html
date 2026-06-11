@@ -51,12 +51,7 @@
       box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
     }
     /* Hero Section styling */
-    .hero-portfolio {
-      padding: 6rem 0 4rem 0;
-      text-align: center;
-      position: relative;
-    }
-    .hero-portfolio .badge {
+    .hero-portfolio-content .badge {
       background: rgba(59, 130, 246, 0.1);
       border: 1px solid rgba(59, 130, 246, 0.2);
       color: var(--portfolio-primary);
@@ -67,24 +62,24 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       display: inline-block;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
-    .hero-portfolio h1 {
+    .hero-portfolio-content h1 {
       font-size: 3.5rem;
       font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      margin-bottom: 2rem;
       background: linear-gradient(135deg, #fff 40%, #a5b4fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -1px;
     }
-    .hero-portfolio p {
-      font-size: 1.2rem;
+    .hero-portfolio-content p {
+      font-size: 1.25rem;
       max-width: 800px;
-      margin: 0 auto 2.5rem auto;
+      margin-bottom: 2.75rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.8;
     }
     .hero-stats-grid {
       display: grid;
@@ -998,6 +993,101 @@
         gap: 1.25rem !important;
       }
     }
+
+    /* Case Studies Visual Highlights */
+    @keyframes dotPulse {
+      0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1.15); opacity: 0.5; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .pulsing-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+      animation: dotPulse 2s infinite;
+      flex-shrink: 0;
+    }
+    .case-study-alanita { border-left: 4px solid #3b82f6 !important; }
+    .case-study-divine { border-left: 4px solid #f97316 !important; }
+    .case-study-sanjay { border-left: 4px solid #ef4444 !important; }
+    .case-study-vgp { border-left: 4px solid #10b981 !important; }
+
+    /* Professional Journey 2x2 Grid Layout */
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .journey-card {
+      background: rgba(11, 18, 32, 0.7);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 20px;
+      padding: 2.25rem;
+      text-align: left;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .journey-card:hover {
+      border-color: var(--portfolio-primary);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
+    }
+    
+    .journey-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .journey-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--portfolio-primary);
+      flex-shrink: 0;
+    }
+    
+    .journey-card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+    
+    .journey-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-top: 2rem;
+      }
+      .journey-card {
+        padding: 1.75rem;
+      }
+    }
 </style>
 </head>
 <body>
@@ -1032,8 +1122,8 @@
         <!-- Left Column: Content -->
         <div class="hero-portfolio-content">
           <span class="badge">Recruiter Portal</span>
-          <h1 style="text-align: left;">Driving Organic Growth Through SEO, AI Search Optimization & Digital Marketing</h1>
-          <p style="text-align: left;">SEO Specialist with 4+ years of experience helping businesses across India, USA, UAE, Australia, and Ireland improve search visibility, generate qualified leads, and grow revenue through data-driven digital marketing strategies.</p>
+          <h1 style="text-align: left;">SEO Specialist | AI Search Optimization Expert</h1>
+          <p style="text-align: left;">With 4+ years of experience, I help businesses increase website traffic, improve search rankings, and grow their online presence across India, USA, UAE, Australia, and Ireland.</p>
           <div class="hero-btns" style="justify-content: flex-start; gap: 1.25rem;">
             <a href="Balamurugan_P_Resume.pdf" download class="btn btn-primary" style="padding: 0.85rem 2rem; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px;">
               <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
@@ -1091,31 +1181,58 @@
        ========================================== -->
   <section class="section section-bg-alt">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
+      <div style="max-width: 1000px; margin: 0 auto;">
         <div class="text-center">
           <span class="badge">My Narrative</span>
           <h2 class="section-title">Professional Journey</h2>
         </div>
-        <div class="glass-card" style="padding: 2.5rem; margin-top: 2rem;">
-          <ul style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 1.5rem;">
-            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
-              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
-              <strong style="color: var(--text-main); font-weight: 700;">Academic Background:</strong> Completed a Bachelor of Engineering (Mechanical Engineering) in 2022 from Velammal College of Engineering and Technology. Developed a strong logical foundation and analytical problem-solving skills that map directly to search algorithms.
-            </li>
-            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
-              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
-              <strong style="color: var(--text-main); font-weight: 700;">Career Transition & Focus:</strong> Began my professional journey as an SEO Analyst, analyzing site crawlability and search console diagnostic logs, and progressed rapidly to SEO Executive roles managing search visibility budgets.
-            </li>
-            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
-              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
-              <strong style="color: var(--text-main); font-weight: 700;">International Exposure:</strong> Directed organic rankings and lead generation campaigns for 50+ projects serving businesses in the USA, UAE, India, Australia, and Ireland.
-            </li>
-            <li style="position: relative; padding-left: 2rem; font-size: 1.1rem; line-height: 1.65; color: var(--text-muted); text-align: left;">
-              <span style="position: absolute; left: 0; top: 0.2rem; color: var(--portfolio-primary); font-weight: bold; font-size: 1.25rem;">✦</span>
-              <strong style="color: var(--text-main); font-weight: 700;">Advanced Optimization:</strong> Passionate about scaling Google/Meta Ads conversion funnels, optimizing page load times for Core Web Vitals, and implementing GEO/AEO strategies for AI search platforms.
-            </li>
-          </ul>
+        
+        <div class="journey-grid">
+          <!-- Card 1: Academic Foundation -->
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-icon-wrapper">
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 11-6-11-6z"/></svg>
+              </div>
+              <h3>Academic Foundation</h3>
+            </div>
+            <p>Completed a Bachelor of Engineering (Mechanical Engineering) in 2022 from Velammal College of Engineering and Technology. Developed a strong logical foundation and analytical problem-solving skills that map directly to search algorithms.</p>
+          </div>
+
+          <!-- Card 2: Career Entry & Growth -->
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-icon-wrapper">
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
+              </div>
+              <h3>Career Entry & Growth</h3>
+            </div>
+            <p>Began my professional journey as an SEO Analyst, analyzing site crawlability and search console diagnostic logs, and progressed rapidly to SEO Executive roles managing search visibility budgets.</p>
+          </div>
+
+          <!-- Card 3: Global Experience -->
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-icon-wrapper">
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/></svg>
+              </div>
+              <h3>Global Experience</h3>
+            </div>
+            <p>Directed organic rankings and lead generation campaigns for 50+ projects serving businesses in the USA, UAE, India, Australia, and Ireland.</p>
+          </div>
+
+          <!-- Card 4: Next-Gen Optimization -->
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-icon-wrapper">
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;"><path d="M12 2c-1.1 0-2 .9-2 2v1.1c-1.39.29-2.61.98-3.59 1.96L5.64 6.3c-.78-.78-2.05-.78-2.83 0s-.78 2.05 0 2.83l.76.76c-.98.98-1.67 2.2-1.96 3.59H1c-1.1 0-2 .9-2 2s.9 2 2 2h1.1c.29 1.39.98 2.61 1.96 3.59l-.76.76c-.78.78-.78 2.05 0 2.83.39.39.9.59 1.41.59s1.02-.2 1.41-.59l.76-.76c.98.98 2.2 1.67 3.59 1.96V20c0 1.1.9 2 2 2s2-.9 2-2v-1.1c1.39-.29 2.61-.98 3.59-1.96l.76.76c.39.39.9.59 1.41.59s1.02-.2 1.41-.59c.78-.78.78-2.05 0-2.83l-.76-.76c.98-.98 1.67-2.2 1.96-3.59H19c1.1 0 2-.9 2-2s-.9-2-2-2h-1.1c-.29-1.39-.98-2.61-1.96-3.59l.76-.76c.78-.78.78-2.05 0-2.83s-2.05-.78-2.83 0l-.76.76c-.98-.98-2.2-1.67-3.59-1.96V4c0-1.1-.9-2-2-2zm0 7c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/></svg>
+              </div>
+              <h3>Next-Gen Optimization</h3>
+            </div>
+            <p>Passionate about scaling Google/Meta Ads conversion funnels, optimizing page load times for Core Web Vitals, and implementing GEO/AEO strategies for AI search platforms.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -1498,7 +1615,7 @@
   <section class="case-studies-section" id="case-studies">
     <div class="container">
       <div class="text-center">
-        <span class="badge">Performance Reports</span>
+        <span class="badge" style="display: inline-flex; align-items: center; gap: 8px;"><span class="pulsing-dot"></span>Performance Reports</span>
         <h2 class="section-title">Search & Analytics Case Studies</h2>
         <p class="section-subtitle" style="margin-bottom: 2rem;">Detailed, organic search console, analytics, and ranking reports from active client campaigns.</p>
       </div>
@@ -1506,7 +1623,7 @@
         <!-- 1. ALANITA TRAVEL -->
         <div class="case-study-card scroll-reveal">
           <!-- Client Header -->
-          <div class="case-study-hero">
+          <div class="case-study-hero case-study-alanita">
             <div class="case-study-client-info">
               <div class="case-study-logo-wrapper">
                 <img src="alanita-logo.png" alt="Alanita Travel Logo">
@@ -1613,7 +1730,7 @@
         <!-- 2. DIVINE FLOWERS USA -->
         <div class="case-study-card scroll-reveal">
           <!-- Client Header -->
-          <div class="case-study-hero">
+          <div class="case-study-hero case-study-divine">
             <div class="case-study-client-info">
               <div class="case-study-logo-wrapper">
                 <img src="divine-logo.png" alt="Divine Flowers Logo">
@@ -1733,7 +1850,7 @@
         <!-- 3. SANJAY TAX PRO -->
         <div class="case-study-card scroll-reveal">
           <!-- Client Header -->
-          <div class="case-study-hero">
+          <div class="case-study-hero case-study-sanjay">
             <div class="case-study-client-info">
               <div class="case-study-logo-wrapper">
                 <img src="sanjay-logo.png" alt="Sanjay Tax Pro Logo">
@@ -1853,7 +1970,7 @@
         <!-- 4. VGP BEACH RESORT -->
         <div class="case-study-card scroll-reveal">
           <!-- Client Header -->
-          <div class="case-study-hero">
+          <div class="case-study-hero case-study-vgp">
             <div class="case-study-client-info">
               <div class="case-study-logo-wrapper">
                 <img src="vgp-logo.png" alt="VGP Resort Logo">
