@@ -547,7 +547,536 @@
         font-size: 0.8rem !important;
       }
     }
-  </style>
+
+        /* ==========================================
+       CASE STUDIES VERTICAL SCROLL STYLES
+       ========================================== */
+    .case-studies-section {
+      padding: 6rem 0;
+      position: relative;
+    }
+    
+    .case-studies-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      margin-top: 4rem;
+    }
+    
+    .case-study-card {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .case-study-hero {
+      background: rgba(11, 18, 32, 0.7);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .case-study-client-info {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-grow: 1;
+    }
+    
+    .case-study-logo-wrapper {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      width: 160px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    
+    .case-study-logo-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .case-study-details {
+      text-align: left;
+    }
+    
+    .case-study-details h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+    
+    .case-study-details .niche-tag {
+      font-size: 0.85rem;
+      color: var(--portfolio-primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+    
+    .case-study-details p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0;
+    }
+    
+    .case-study-hero-stats {
+      display: flex;
+      gap: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .case-study-hero-stats .hero-stat {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 16px;
+      padding: 1.25rem 1.75rem;
+      min-width: 140px;
+      text-align: center;
+    }
+    
+    .case-study-hero-stats .hero-stat .stat-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--portfolio-primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .case-study-hero-stats .hero-stat .stat-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    .case-study-body-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    
+    .report-card {
+      background: rgba(11, 18, 32, 0.85);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 20px;
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .report-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 20px 45px rgba(59, 130, 246, 0.05);
+    }
+    
+    .report-card-info {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .report-card-info h4 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+    }
+    
+    .report-card-info p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    
+    .report-card-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    
+    .report-card-stats .card-stat {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+    }
+    
+    .report-card-stats .card-stat .stat-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--portfolio-primary);
+      margin-bottom: 0.2rem;
+    }
+    
+    .report-card-stats .card-stat .stat-lbl {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .report-card-image-col {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--portfolio-card-border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      background: #080c14;
+      cursor: zoom-in;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 16 / 9.5;
+    }
+    
+    .report-card-image-col:hover {
+      border-color: var(--portfolio-primary);
+      transform: scale(1.02);
+      box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+    }
+    
+    .report-card-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .report-card-image-col.contain-img img {
+      object-fit: contain;
+      padding: 0.5rem;
+    }
+    
+    .report-card-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 18, 32, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+    
+    .report-card-image-col:hover .report-card-image-overlay {
+      opacity: 1;
+    }
+    
+    .zoom-badge {
+      background: var(--portfolio-primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .report-rankings-grid {
+      display: grid;
+      gap: 0.75rem;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .report-rankings-grid.cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .report-rankings-grid.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .ranking-item-wrapper {
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: zoom-in;
+      transition: all 0.3s ease;
+    }
+    
+    .ranking-item-wrapper:hover {
+      border-color: var(--portfolio-primary);
+      transform: scale(1.03);
+    }
+    
+    .ranking-item-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Scroll Reveal Animation Styles */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Lightbox Modal Styles */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 7, 18, 0.95);
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    
+    .lightbox-modal.active {
+      display: flex;
+      animation: fadeInLightBox 0.3s ease forwards;
+    }
+    
+    @keyframes fadeInLightBox {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .lightbox-content-wrapper {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+    
+    .lightbox-close-btn {
+      position: absolute;
+      top: -3.5rem;
+      right: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--portfolio-card-border);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    
+    .lightbox-close-btn:hover {
+      background: #ff4d4d;
+      border-color: #ff4d4d;
+      transform: rotate(90deg);
+    }
+    
+    .lightbox-title {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    
+    /* Responsive overrides */
+    @media (max-width: 992px) {
+      .case-study-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+      }
+      
+      .case-study-hero-stats {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      
+      .case-study-hero-stats .hero-stat {
+        min-width: auto;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .case-studies-section {
+        padding: 4rem 0;
+      }
+      
+      .case-studies-list {
+        gap: 3.5rem;
+        margin-top: 2.5rem;
+      }
+      
+      .case-study-client-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+      
+      .case-study-logo-wrapper {
+        width: 140px;
+        height: 80px;
+        padding: 1rem;
+      }
+      
+      .case-study-details h3 {
+        font-size: 1.5rem;
+      }
+      
+      .case-study-details p {
+        font-size: 0.95rem;
+      }
+      
+      .report-card {
+        padding: 1.75rem;
+        gap: 1.5rem;
+      }
+      
+      .report-card-info h4 {
+        font-size: 1.2rem;
+      }
+      
+      .report-card-info p {
+        font-size: 0.9rem;
+      }
+      
+      .report-card-stats {
+        gap: 0.75rem;
+      }
+      
+      .report-card-stats .card-stat .stat-val {
+        font-size: 1.15rem;
+      }
+      
+      .report-card-stats .card-stat .stat-lbl {
+        font-size: 0.65rem;
+      }
+    }
+
+    /* Inline Rankings Showcase Styles */
+    .case-study-rankings-panel {
+      background: rgba(11, 18, 32, 0.7);
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+      text-align: left;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .case-study-rankings-panel h4 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+    
+    .case-study-rankings-panel p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    .rankings-inline-grid {
+      display: grid;
+      gap: 1.5rem;
+      width: 100%;
+    }
+    
+    .rankings-inline-grid.cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .rankings-inline-grid.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .ranking-inline-item {
+      background: #080c14;
+      border: 1px solid var(--portfolio-card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .ranking-inline-item:hover {
+      border-color: var(--portfolio-primary);
+      transform: translateY(-5px);
+    }
+    
+    .ranking-inline-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    @media (max-width: 992px) {
+      .rankings-inline-grid.cols-2,
+      .rankings-inline-grid.cols-3 {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .case-study-rankings-panel {
+        padding: 1.75rem;
+      }
+    }
+</style>
 </head>
 <body>
 
@@ -1077,6 +1606,489 @@
     </div>
   </section>
 
+    <!-- ==========================================
+       CASE STUDIES VERTICAL SCROLL SECTION
+       ========================================== -->
+  <section class="case-studies-section" id="case-studies">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Performance Reports</span>
+        <h2 class="section-title">Search & Analytics Case Studies</h2>
+        <p class="section-subtitle" style="margin-bottom: 2rem;">Detailed, organic search console, analytics, and ranking reports from active client campaigns.</p>
+      </div>
+
+      <div class="case-studies-list">
+        
+        <!-- 1. ALANITA TRAVEL -->
+        <div class="case-study-card scroll-reveal">
+          <!-- Client Header -->
+          <div class="case-study-hero">
+            <div class="case-study-client-info">
+              <div class="case-study-logo-wrapper">
+                <img src="alanita-logo.png" alt="Alanita Travel Logo">
+              </div>
+              <div class="case-study-details">
+                <span class="niche-tag">Online Travel Agency</span>
+                <h3>Alanita Travel</h3>
+                <p>Alanita Travel is a major online travel agency focusing on affordable USA to India flight bookings. The campaign objective was to recover indexation values and capture high-intent flights search terms in the highly competitive travel market.</p>
+              </div>
+            </div>
+            <div class="case-study-hero-stats">
+              <div class="hero-stat">
+                <div class="stat-val">99.3%</div>
+                <div class="stat-lbl">Organic Share</div>
+              </div>
+              <div class="hero-stat">
+                <div class="stat-val">64,562</div>
+                <div class="stat-lbl">Organic Sessions</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report Cards Grid -->
+          <div class="case-study-body-grid">
+            <!-- GSC Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Search Console</h4>
+                <p>Dominant organic growth over the baseline, driving competitive user clicks and keyword footprints. Consistently ranked on page 1 for flight deal search intent.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">36.8K</div>
+                    <div class="stat-lbl">Total Clicks</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">1.01M</div>
+                    <div class="stat-lbl">Impressions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('alanita-gsc.png', 'Alanita Travel - Google Search Console')">
+                <img src="alanita-gsc.png" alt="Alanita Travel Search Console">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GA Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Analytics</h4>
+                <p>Deep traffic channel breakdown verifying organic sessions as the single most critical traffic engine, contributing to over 98% of total travel registrations.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">26.3K</div>
+                    <div class="stat-lbl">Organic Users</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">64.5K</div>
+                    <div class="stat-lbl">Total Sessions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('alanita-ga.png', 'Alanita Travel - Google Analytics')">
+                <img src="alanita-ga.png" alt="Alanita Travel Google Analytics">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Blog Performance & Content Growth</h4>
+                <p>Conducted extensive technical audit, content gaps analysis, and internal link structure repairs. Post-optimization clicks spiked massively within a 60-day window.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">2.5K+</div>
+                    <div class="stat-lbl">Organic Clicks</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">400K+</div>
+                    <div class="stat-lbl">Impressions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('alanita-blog.png', 'Alanita Travel - Blog Growth')">
+                <img src="alanita-blog.png" alt="Alanita Travel Blog Performance">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DIVINE FLOWERS USA -->
+        <div class="case-study-card scroll-reveal">
+          <!-- Client Header -->
+          <div class="case-study-hero">
+            <div class="case-study-client-info">
+              <div class="case-study-logo-wrapper">
+                <img src="divine-logo.png" alt="Divine Flowers Logo">
+              </div>
+              <div class="case-study-details">
+                <span class="niche-tag">E-commerce Flowers</span>
+                <h3>Divine Flowers USA</h3>
+                <p>Divine Flowers USA is an e-commerce platform shipping traditional Indian flowers to customers across the US for weddings, religious ceremonies, and regional festivals.</p>
+              </div>
+            </div>
+            <div class="case-study-hero-stats">
+              <div class="hero-stat">
+                <div class="stat-val">35%</div>
+                <div class="stat-lbl">Organic Share</div>
+              </div>
+              <div class="hero-stat">
+                <div class="stat-val">54.9%</div>
+                <div class="stat-lbl">Return User Rate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report Cards Grid -->
+          <div class="case-study-body-grid">
+            <!-- GSC Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Search Console</h4>
+                <p>Secured high search visibility for niche, high-value transactional terms like "Indian traditional garlands" and "pooja flowers delivery USA".</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">2.18K</div>
+                    <div class="stat-lbl">Total Clicks</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">92.5K</div>
+                    <div class="stat-lbl">Impressions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('divine-gsc.png', 'Divine Flowers - Google Search Console')">
+                <img src="divine-gsc.png" alt="Divine Flowers Search Console">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GA Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Analytics</h4>
+                <p>Analyzed customer traffic streams showing organic users as the highest-converting funnel with exceptionally low bounce rates and high repeat purchases.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">1.67K</div>
+                    <div class="stat-lbl">Organic Users</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">2.95K</div>
+                    <div class="stat-lbl">Organic Sessions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('divine-ga.jpg', 'Divine Flowers - Google Analytics')">
+                <img src="divine-ga.jpg" alt="Divine Flowers Google Analytics">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Insights Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Target Audience Retention</h4>
+                <p>Organic search acquisition drove 446 returning customers (54.9% of total buyers). This validates that organic reach is attracting a highly loyal, high-intent audience with repeat customer value.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">446</div>
+                    <div class="stat-lbl">Returning Users</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">USA</div>
+                    <div class="stat-lbl">Niche Focus</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col contain-img" style="cursor: default;">
+                <img src="profile.png" alt="Divine Flowers Insights" style="opacity: 0.85; max-height: 250px;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Rankings Grid Showcase (Direct, Inline) -->
+          <div class="case-study-rankings-panel">
+            <h4>USA Search Rankings</h4>
+            <p>Top Google Page 1 visibility secured for competitive, high-intent local queries across the United States. Showcased inline in full readability (no popup required).</p>
+            <div class="rankings-inline-grid cols-2">
+              <div class="ranking-inline-item">
+                <img src="divine-ranking-1.jpg" alt="Divine Flowers - Keyword Ranking 1">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="divine-ranking-2.jpg" alt="Divine Flowers - Keyword Ranking 2">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="divine-ranking-3.jpg" alt="Divine Flowers - Keyword Ranking 3">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="divine-ranking-4.jpg" alt="Divine Flowers - Keyword Ranking 4">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SANJAY TAX PRO -->
+        <div class="case-study-card scroll-reveal">
+          <!-- Client Header -->
+          <div class="case-study-hero">
+            <div class="case-study-client-info">
+              <div class="case-study-logo-wrapper">
+                <img src="sanjay-logo.png" alt="Sanjay Tax Pro Logo">
+              </div>
+              <div class="case-study-details">
+                <span class="niche-tag">CPA & Tax Services</span>
+                <h3>Sanjay Tax Pro</h3>
+                <p>Sanjay Tax Pro provides expert Indian tax consulting and CPA services in the USA. We help individuals, NRIs, and businesses with tax preparation, filing, bookkeeping, and IRS compliance.</p>
+              </div>
+            </div>
+            <div class="case-study-hero-stats">
+              <div class="hero-stat">
+                <div class="stat-val">97%</div>
+                <div class="stat-lbl">Organic Share</div>
+              </div>
+              <div class="hero-stat">
+                <div class="stat-val">621</div>
+                <div class="stat-lbl">Conversions</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report Cards Grid -->
+          <div class="case-study-body-grid">
+            <!-- GSC Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Search Console</h4>
+                <p>Optimized technical metadata, created targeted landing pages, and managed indexing priorities. Resulted in a massive search visibility spike during the tax period.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">4.38K</div>
+                    <div class="stat-lbl">Tax Period Clicks</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">301K</div>
+                    <div class="stat-lbl">Impressions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('sanjay-gsc.png', 'Sanjay Tax Pro - Google Search Console')">
+                <img src="sanjay-gsc.png" alt="Sanjay Tax Pro Search Console">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GA Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Analytics</h4>
+                <p>Tracked specific user conversion events (Form Submits, Booking Clicks, Call Leads). Organic search stood out as the dominant acquisition channel with high conversion values.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">3.87K</div>
+                    <div class="stat-lbl">Organic Users</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">6.91K</div>
+                    <div class="stat-lbl">Total Sessions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('sanjay-ga.jpg', 'Sanjay Tax Pro - Google Analytics')">
+                <img src="sanjay-ga.jpg" alt="Sanjay Tax Pro Google Analytics">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Campaign ROI Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Campaign ROI</h4>
+                <p>Achieved a high CTR (average position 9.5) and 621 conversions during tax season. Verified a 58-second average engagement time, confirming that page content was highly relevant and trust-oriented.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">58s</div>
+                    <div class="stat-lbl">Avg Engage Time</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">9.5</div>
+                    <div class="stat-lbl">Avg Position</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col contain-img" style="cursor: default;">
+                <img src="profile.png" alt="Sanjay Tax Pro Insights" style="opacity: 0.85; max-height: 250px;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Rankings Grid Showcase (Direct, Inline) -->
+          <div class="case-study-rankings-panel">
+            <h4>USA Search Rankings</h4>
+            <p>Top Google Page 1 visibility secured for competitive tax consulting, bookkeeping, and NRI CPA search terms in the USA market. Showcased inline in full readability (no popup required).</p>
+            <div class="rankings-inline-grid cols-2">
+              <div class="ranking-inline-item">
+                <img src="sanjay-ranking-1.jpg" alt="Sanjay Tax Pro - Ranking 1">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="sanjay-ranking-2.jpg" alt="Sanjay Tax Pro - Ranking 2">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="sanjay-ranking-3.jpg" alt="Sanjay Tax Pro - Ranking 3">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="sanjay-ranking-4.jpg" alt="Sanjay Tax Pro - Ranking 4">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. VGP BEACH RESORT -->
+        <div class="case-study-card scroll-reveal">
+          <!-- Client Header -->
+          <div class="case-study-hero">
+            <div class="case-study-client-info">
+              <div class="case-study-logo-wrapper">
+                <img src="vgp-logo.png" alt="VGP Resort Logo">
+              </div>
+              <div class="case-study-details">
+                <span class="niche-tag">Luxury Hotel Resort</span>
+                <h3>VGP Beach Resort</h3>
+                <p>VGP Golden Beach Resort offers a luxurious beachfront stay on Chennai’s East Coast Road. The goal was to dominate organic visibility for Chennai tourism, resort stay, and beach wedding queries.</p>
+              </div>
+            </div>
+            <div class="case-study-hero-stats">
+              <div class="hero-stat">
+                <div class="stat-val">6.4</div>
+                <div class="stat-lbl">Avg Position</div>
+              </div>
+              <div class="hero-stat">
+                <div class="stat-val">4.6%</div>
+                <div class="stat-lbl">Average CTR</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report Cards Grid -->
+          <div class="case-study-body-grid">
+            <!-- GSC Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Google Search Console</h4>
+                <p>Consistently grew organic search clicks through on-page local content expansion, speed optimization for Core Web Vitals, and structured beach resorts schema configurations.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">8.96K</div>
+                    <div class="stat-lbl">3-Month Clicks</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">196K</div>
+                    <div class="stat-lbl">Impressions</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col" onclick="openLightbox('vgp-gsc.png', 'VGP Golden Beach Resort - Google Search Console')">
+                <img src="vgp-gsc.png" alt="VGP Resort Search Console">
+                <div class="report-card-image-overlay">
+                  <div class="zoom-badge">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59A4.23 1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    Zoom Chart
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotel Authority Card -->
+            <div class="report-card">
+              <div class="report-card-info">
+                <h4>Hotel Search Authority</h4>
+                <p>Secured strong Page 1 positions for competitive regional keyword categories, ensuring consistent booking requests and event space inquiries directly through the hotel website channels.</p>
+                <div class="report-card-stats">
+                  <div class="card-stat">
+                    <div class="stat-val">Page 1</div>
+                    <div class="stat-lbl">Target Rankings</div>
+                  </div>
+                  <div class="card-stat">
+                    <div class="stat-val">Chennai</div>
+                    <div class="stat-lbl">Location Focus</div>
+                  </div>
+                </div>
+              </div>
+              <div class="report-card-image-col contain-img" style="cursor: default;">
+                <img src="profile.png" alt="VGP Resort Insights" style="opacity: 0.85; max-height: 250px;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Rankings Grid Showcase (Direct, Inline) -->
+          <div class="case-study-rankings-panel">
+            <h4>ECR Beach Resort Rankings</h4>
+            <p>Top Page 1 Google Search rankings secured for luxury hotel, ECR stay bookings, and beachfront wedding venues in Chennai. Showcased inline in full readability (no popup required).</p>
+            <div class="rankings-inline-grid cols-3">
+              <div class="ranking-inline-item">
+                <img src="vgp-ranking-1.jpg" alt="VGP Resort - Google SERP 1">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="vgp-ranking-2.jpg" alt="VGP Resort - Google SERP 2">
+              </div>
+              <div class="ranking-inline-item">
+                <img src="vgp-ranking-3.jpg" alt="VGP Resort - Google SERP 3">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content-wrapper" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox()">
+        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+      <img src="" alt="Zoomed View" class="lightbox-img" id="lightbox-img-el">
+      <div class="lightbox-title" id="lightbox-title-el">Zoomed Chart View</div>
+    </div>
+  </div>
+
   <!-- ==========================================
        PROJECT EXPERIENCE SECTION (TABS)
        ========================================== -->
@@ -1406,6 +2418,44 @@
       // Activate clicked button
       event.currentTarget.classList.add('active');
     }
-  </script>
+
+        // Lightbox Controls
+    function openLightbox(src, title) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img-el');
+      const titleEl = document.getElementById('lightbox-title-el');
+      
+      img.src = src;
+      titleEl.textContent = title;
+      modal.classList.add('active');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('active');
+    }
+
+    // Scroll Reveal Intersection Observer
+    function initScrollReveal() {
+      const revealElements = document.querySelectorAll('.scroll-reveal');
+      
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -60px 0px'
+      });
+      
+      revealElements.forEach(el => observer.observe(el));
+    }
+    
+    // Initialize page components
+    window.addEventListener('DOMContentLoaded', () => {
+      initScrollReveal();
+    });</script>
 </body>
 </html>
